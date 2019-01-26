@@ -1,8 +1,8 @@
 #!/bin/bash
 
-function test_manifest {
+function manifest_search {
 
-
+    printf "\n\033[1;31m ====================== START =========================\033[0m\n"
     if [ -z "$1" ]; then
         printf "\n\033[1;31m Please Provide Argument\033[0m\n"
     fi
@@ -14,33 +14,36 @@ function test_manifest {
 
     if [ -n "$2" ]; then
           printf "\n\033[1;31m 2nd Filter\033[0m\n"
-          egrep --exclude='manifest-eol.txt' -r -h -i -e "$1" /home/msiddiqu/prodsec/documentation/process-docs/manifest/* | egrep -Ev -e "$2" | uniq --group -w 9 | egrep -z "$1"  
+          egrep --exclude='manifest-eol.txt' -r -h -i -e "$1" /home/msiddiqu/prodsec/documentation/process-docs/manifest/* | egrep -Ev -e "$2" | uniq --group -w 9 | egrep -z "$1"
     fi
 
     if [ -n "$3" ]; then
           printf "\n\033[1;31m 3rd Filter\033[0m\n"
-          egrep --exclude='manifest-eol.txt' -r -h -i -e "$1" /home/msiddiqu/prodsec/documentation/process-docs/manifest/* | egrep -Ev -e "$2" | egrep -Ev -e "$3" | uniq --group -w 9 | egrep -z "$1"  
+          egrep --exclude='manifest-eol.txt' -r -h -i -e "$1" /home/msiddiqu/prodsec/documentation/process-docs/manifest/* | egrep -Ev -e "$2" | egrep -Ev -e "$3" | uniq --group -w 9 | egrep -z "$1"
 
     fi
 
     if [ -n "$4" ]; then
           printf "\n\033[1;31m 4th Filter\033[0m\n"
-          egrep --exclude='manifest-eol.txt' -r -h -i -e "$1" /home/msiddiqu/prodsec/documentation/process-docs/manifest/* | egrep -Ev -e "$2" | egrep -Ev -e "$3" | egrep -Ev -e "$4" | uniq --group -w 9 | egrep -z "$1"  
+          egrep --exclude='manifest-eol.txt' -r -h -i -e "$1" /home/msiddiqu/prodsec/documentation/process-docs/manifest/* | egrep -Ev -e "$2" | egrep -Ev -e "$3" | egrep -Ev -e "$4" | uniq --group -w 9 | egrep -z "$1"
 
     fi
 
     if [ -n "$5" ]; then
           printf "\n\033[1;31m 5th Filter \033[0m\n"
-          egrep --exclude='manifest-eol.txt' -r -h -i -e "$1" /home/msiddiqu/prodsec/documentation/process-docs/manifest/* | egrep -Ev -e "$2" | egrep -Ev -e "$3" | egrep -Ev -e "$4" | egrep -Ev -e "$5" | uniq --group -w 9 | egrep -z "$1"  
+          egrep --exclude='manifest-eol.txt' -r -h -i -e "$1" /home/msiddiqu/prodsec/documentation/process-docs/manifest/* | egrep -Ev -e "$2" | egrep -Ev -e "$3" | egrep -Ev -e "$4" | egrep -Ev -e "$5" | uniq --group -w 9 | egrep -z "$1"
 
     fi
 
     if [ -n "$6" ]; then
           printf "\n\033[1;31m 6th Filter, till here I'm letting it supported in this script \033[0m\n"
-          egrep --exclude='manifest-eol.txt' -r -h -i -e "$1" /home/msiddiqu/prodsec/documentation/process-docs/manifest/* | egrep -Ev -e "$2" | egrep -Ev -e "$3" | egrep -Ev -e "$4" | egrep -Ev -e "$5" | egrep -Ev -e "$6" | uniq --group -w 9 | egrep -z "$1"  
+          egrep --exclude='manifest-eol.txt' -r -h -i -e "$1" /home/msiddiqu/prodsec/documentation/process-docs/manifest/* | egrep -Ev -e "$2" | egrep -Ev -e "$3" | egrep -Ev -e "$4" | egrep -Ev -e "$5" | egrep -Ev -e "$6" | uniq --group -w 9 | egrep -z "$1"
 
     fi
+    echo
+    printf "\n\033[1;31m ====================== END =========================\033[0m\n"
     echo
     echo "NOTE: Do not use brackets, it skips important stuff if you want to filter out package-extra and package-python, you can do 'package-extra|python' after first argument. Add do you want to see an example function of cat with file.pnq sample file"
 
 }
+~           
