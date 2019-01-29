@@ -46,4 +46,4 @@ function manifest_search {
     echo "NOTE: Do not use brackets, it skips important stuff if you want to filter out package-extra and package-python, you can do 'package-extra|python' after first argument. Add do you want to see an example function of cat with file.pnq sample file"
 
 }
-~           
+           
