@@ -9,6 +9,20 @@ Tasks to do:
 2. replace all conditions with if [ $# == 2 ]
 3. variable for home directory
 
+
+
+INSTRUCTIONS TO INSTALL : 
+Write your home directory 
+example
+
+copy this script to one of your path
+write source /usr/local/bin/manifest.sh
+
+restart terminal
+
+
+If you want to avoid restarting terminal,
+just do source manifest.sh
   
 
 
