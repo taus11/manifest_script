@@ -7,6 +7,7 @@ NOTE: Do not use brackets, it skips important stuff if you want to filter out pa
 Tasks to do: 
 1. first commit, ====start/end ===
 2. replace all conditions with if [ $# == 2 ]
+3. variable for home directory
 
   
 
