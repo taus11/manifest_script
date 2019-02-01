@@ -9,6 +9,7 @@ Tasks to do:
 -. make manifest proper executable
 -. math for fullscreen == start ==
 -. why using -E ?
+-. Fix unary operator expected error
 
 INSTRUCTIONS TO INSTALL :
 Write your home directory
