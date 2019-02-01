@@ -8,8 +8,7 @@ Tasks to do:
 -. variable for home directory
 -. make manifest proper executable
 -. math for fullscreen == start ==
--. grep -v -i ? [try with gd search]
--. why is -v used ?
+-. why using -E ?
 
 INSTRUCTIONS TO INSTALL :
 Write your home directory
