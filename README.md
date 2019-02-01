@@ -10,6 +10,7 @@ Tasks to do:
 -. math for fullscreen == start ==
 -. why using -E ?
 -. Fix unary operator expected error
+-. Stack exchange : How can I turn unheadlined groups to headlined
 
 INSTRUCTIONS TO INSTALL :
 Write your home directory
