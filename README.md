@@ -5,11 +5,10 @@ These are the work-simplifying scripts that I create and keep improving which ke
 NOTE: Do not use brackets, it skips important stuff if you want to filter out package-extra and package-python, you can do 'package-extra|python' after first argument. Add do you want to see an example function of cat with file.pnq sample file
 
 Tasks to do:
--. first commit, ====start/end ===
--. replace all conditions with if [ $# == 2 ]
 -. variable for home directory
-
-
+-. make manifest proper executable
+-. math for fullscreen == start ==
+-. grep -v -i ? [try with gd search]
 
 INSTRUCTIONS TO INSTALL :
 Write your home directory
