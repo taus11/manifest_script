@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function tester_man {
+function manifest_search {
 
     printf "\n\033[1;31m ====================== START =========================\033[0m\n"
     if [ -zi "$1" ]; then
