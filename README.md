@@ -9,6 +9,7 @@ Tasks to do:
 -. make manifest proper executable
 -. math for fullscreen == start ==
 -. grep -v -i ? [try with gd search]
+-. why is -v used ?
 
 INSTRUCTIONS TO INSTALL :
 Write your home directory
