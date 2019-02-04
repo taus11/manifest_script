@@ -23,6 +23,22 @@ $chmod +x file.sh
 
 copy this script to one of your path
 
+3. Add this file to startup applications :-
+
+Go to  System > Preferences > Startup Applications
+
+Click on add  and in command write-
+1
+
+bash path/to/your/file.sh
+
+Close and its done!
+
+Next time when you start your system, all the tasks mentioned in the script will be automated.
+
+Hope this helped!
+
+
 write source /usr/local/bin/manifest.sh
 
 restart terminal
