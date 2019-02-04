@@ -12,6 +12,8 @@ Tasks to do:
 -. Fix unary operator expected error
 -. Stack exchange : How can I turn unheadlined groups to headlined
 -. ↴ add this to manifest function, and learn about gitignore
+-. fix bash: [: -zi: unary operator expected
+
 
 INSTRUCTIONS TO INSTALL :
 Write your home directory
