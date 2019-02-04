@@ -19,7 +19,10 @@ INSTRUCTIONS TO INSTALL :
 Write your home directory
 example
 
+$chmod +x file.sh
+
 copy this script to one of your path
+
 write source /usr/local/bin/manifest.sh
 
 restart terminal
