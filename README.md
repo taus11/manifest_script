@@ -11,6 +11,7 @@ Tasks to do:
 -. why using -E ?
 -. Fix unary operator expected error
 -. Stack exchange : How can I turn unheadlined groups to headlined
+-. ↴ add this to manifest function, and learn about gitignore
 
 INSTRUCTIONS TO INSTALL :
 Write your home directory
