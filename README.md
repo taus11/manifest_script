@@ -13,7 +13,7 @@ NOTE: Do not use brackets, it skips important stuff if you want to filter out pa
 -. Stack exchange : How can I turn unheadlined groups to headlined
 -. ↴ add this to manifest function, and learn about gitignore
 -. fix bash: [: -zi: unary operator expected
-
+-. If we simply ignore containers directory: $egrep --exclude-dir=/home/msiddiqu/prodsec/documentation/process-docs/manifest/containers --exclude='manifest-eol.txt'
 
 INSTRUCTIONS TO INSTALL :
 Write your home directory
