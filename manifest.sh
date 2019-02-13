@@ -7,7 +7,7 @@ function manifest_search {
 
     printf "\n\033[1;31m ====================== START =========================\033[0m\n"
     if [ -z "$1" ]; then
-        printf "\n\033[1;31m Please Provide Argument\033[0m\n"
+        printf "\n\033[1;31m Please Provide An Argument\033[0m\n"
     fi
 
     if [ $# == 1 ]; then
