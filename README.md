@@ -15,6 +15,7 @@ NOTE: Do not use brackets, it skips important stuff if you want to filter out pa
 -. fix bash: [: -zi: unary operator expected
 -. If we simply ignore containers directory:
 -. Separator in first filter
+-.    automatically do this in first filter :  echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
 
 INSTRUCTIONS TO INSTALL :
 Write your home directory
