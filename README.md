@@ -16,6 +16,7 @@ NOTE: Do not use brackets, it skips important stuff if you want to filter out pa
 -. If we simply ignore containers directory:
 -. Separator in first filter
 -.    automatically do this in first filter :  echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
+-. Source it before you run or grep wont highlight the search keyword :(
 
 INSTRUCTIONS TO INSTALL :
 Write your home directory
