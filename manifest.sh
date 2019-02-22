@@ -49,6 +49,5 @@ function manifest_search {
     echo "NOTE: Do not use brackets, it skips important stuff if you want to filter out package-extra and package-python, you can do 'package-extra|python' after first argument. Add do you want to see an example function of cat with file.pnq sample file"
     echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
     echo ; echo "Also Make a practice to search:" ; echo "$ manifest_search '""solr[0-9]""' first, to find out packages like 'solr3' package"
- ;
-    
+
 }
