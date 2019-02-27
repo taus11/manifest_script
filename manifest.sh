@@ -7,7 +7,7 @@
 
 function manifest_search {
 
-    printf "\n\033[1;31m ====================== START =========================\033[0m\n"
+    printf "\n\033[1;31m ====================== START OF MANIFEST SEARCH =========================\033[0m\n"
     if [ -z "$1" ]; then
         printf "\n\033[1;31m Please Provide An Argument\033[0m\n"
     fi
@@ -46,7 +46,7 @@ function manifest_search {
 
     fi
     echo
-    printf "\n\033[1;31m ====================== END =========================\033[0m\n"
+    printf "\n\033[1;31m ====================== END OF MANIFEST SEARCH =========================\033[0m\n"
     echo
     echo "NOTE: Do not use brackets, it skips important stuff if you want to filter out package-extra and package-python, you can do 'package-extra|python' after first argument. Add do you want to see an example function of cat with file.pnq sample file"
     echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
