@@ -52,7 +52,7 @@ just do source manifest.sh
 
 
 
-EXAMPLES:
+EXAMPLES IN RED after the script runs:
 
 1. $ manifest_search poppler 'rubygem|sharp|zathura|compat|poppler-data|python|pypoppler'
 

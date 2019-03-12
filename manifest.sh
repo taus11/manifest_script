@@ -15,6 +15,7 @@ function manifest_search {
           printf "\n\033[1;31m 1st Filter \033[0m\n"
           egrep --exclude-dir=/home/msiddiqu/git/gitlab/manifests/containers --exclude='manifest-eol.txt' -r -h -i -e "$1" /home/msiddiqu/git/gitlab/manifests/*
     fi
+    #
 
     if [ $# == 2 ]; then
           printf "\n\033[1;31m 2nd Filter\033[0m\n"
