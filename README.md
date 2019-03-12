@@ -54,6 +54,13 @@ just do source manifest.sh
 
 EXAMPLES IN RED after the script runs:
 
+$ manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]'  separate
+
+is the same as
+
+$ manifest_search glib 'glibc|glibd|json|networking|dbus|json|tag|libvirt|libgit|geocode|libappstream|glibmm|cglib|telepathy|perl|snapd|ghc|python|libac|libgs|template|signon|pcre|rubygem|rust|java|spglib|alglib|codeready'
+
+
 1. $ manifest_search poppler 'rubygem|sharp|zathura|compat|poppler-data|python|pypoppler'
 
 
