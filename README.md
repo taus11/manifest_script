@@ -15,6 +15,7 @@ NOTE: Do not use brackets, it skips important stuff if you want to filter out pa
 -. fix bash: [: -zi: unary operator expected
 -. If we simply ignore containers directory:
 -. Separator in first filter
+-. Optimise for packages like python : http://localhost:5600/static/#/flaw/1631420
 -.    automatically do this in first filter :  echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
 -. Source it before you run or grep wont highlight the search keyword :(
 
@@ -55,6 +56,8 @@ just do source manifest.sh
 EXAMPLES IN RED after the script runs:
 
 $ manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]'  separate
+
+Use the keyword separate to view a grouped easy on the eyes affects
 
 is the same as
 
