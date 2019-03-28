@@ -16,6 +16,7 @@ NOTE: Do not use brackets, it skips important stuff if you want to filter out pa
 -. fix bash: [: -zi: unary operator expected
 -. If we simply ignore containers directory:
 -. Separator in first filter
+-. You may modify this script to run git pull --rebase to always update the manifest repo before running the search function.
 -. Optimise for packages like python : http://localhost:5600/static/#/flaw/1631420
 -.    automatically do this in first filter :  echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
 -. Source it before you run or grep wont highlight the search keyword :(
