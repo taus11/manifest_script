@@ -102,7 +102,6 @@ upcoming:enterprise_linux:8.0:buildroot/poppler-0.66.0-11.el8
 ====================== END =========================
 
 
-
 How to use:
 
 manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|python|utils'
