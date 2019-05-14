@@ -1,5 +1,4 @@
 
-#!/bin/bash
 
 # containers_dir = /home/msiddiqu/git/gitlab/manifests/containers/
 # manifest_dir = /home/msiddiqu/git/gitlab/manifests/*
