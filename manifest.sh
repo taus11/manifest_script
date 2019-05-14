@@ -1,12 +1,14 @@
+
 #!/bin/bash
 
 # containers_dir = /home/msiddiqu/git/gitlab/manifests/containers/
 # manifest_dir = /home/msiddiqu/git/gitlab/manifests/*
+# This script's path to source = source ~/git/github/functions/manifest.sh
 # Please use full path name and not ~ for your home dir. because it matches the output that has full path.
 
 function manifest_search {
 
-    printf "\n\033[1;31m ====================== START OF MANIFEST SEARCH =========================\033[0m\n"
+    printf "\n\033[1;31m ====================== START OF MANIFEST SEARCH v2 =========================\033[0m\n"
     if [ -z "$1" ]; then
         printf "\n\033[1;31m Please Provide An Argument\033[0m\n"
     fi
