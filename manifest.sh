@@ -1,5 +1,3 @@
-
-
 # containers_dir = /home/msiddiqu/git/gitlab/manifests/containers/
 # manifest_dir = /home/msiddiqu/git/gitlab/manifests/*
 # This script's path to source = source ~/git/github/functions/manifest.sh
