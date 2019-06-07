@@ -1,6 +1,7 @@
+```
 ![black](https://user-images.githubusercontent.com/32044701/59132991-3f334300-8994-11e9-8782-c7c0eaecb020.jpg)
-
-README:
+```
+# HOW TO USE THIS SCRIPT:
 
 Put this line in your ~/.bashrc : source ~/git/github/manifest_script/manifest.sh
 
@@ -8,8 +9,7 @@ You can simply write
 $ manifest_search wireshark separate
 This will group and separate affects in terms of different products.
 
-
-EXAMPLES:
+# EXAMPLES:
 ```
 EXAMPLE 0 (Because arrays start at 0): Cat and dogs!
 
@@ -17,6 +17,7 @@ Statement: I want to see both kernel-rt and kernel-alt
 
 Command:
 $manifest_search
+
 ```
 EXAMPLE 1 :
 
