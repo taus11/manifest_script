@@ -1,18 +1,46 @@
 
-#Put this line in your ~/.bashrc : source ~/git/github/manifest_script/manifest.sh
+
+README:
+
+Put this line in your ~/.bashrc : source ~/git/github/manifest_script/manifest.sh
+
+You can simply write
+$ manifest_search wireshark separate
+This will group and separate affects in terms of different products.
 
 
+EXAMPLES:
+
+EXAMPLE 0 (Because arrays start at 0): Cat and dogs!
+
+Statement: I want to see both kernel-rt and kernel-alt
+
+Command:
+$manifest_search
+
+EXAMPLE 1 :
+
+Statement: I want to see both kernel-rt and kernel-alt
+
+$manifest_search 'kernel-alt|kernel-rt'
+
+**Screenshot**
 
 
-***
-
+TODO:
+- upload it to PS tools git repo
+- Email to incoming.
+- Screenshot examples.
     echo
-    echo "NOTE: Do not use brackets, it skips important stuff if you want to filter out package-extra and package-python, you can do 'package-extra|python' after first argument. Add do you want to see an example function of cat with file.pnq sample file"
+    echo "NOTE: Do not use brackets, it skips important stuff if you want to filter out package-extra and package-python, you can do 'package-extra|python' after first argument.
+
+     Add do you want to see an example function of cat with file.pnq sample file"
+
     echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
+
     echo ; echo "Also Make a practice to search:" ; echo "$ manifest_search '""solr[0-9]""' first, to find out packages like 'solr3' package"
 
 ***
-upload it to PS tools git repo
 
 These are the work-simplifying scripts that I create and keep improving which keeps improving
 

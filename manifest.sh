@@ -1,4 +1,4 @@
-#Instructions:
+##Instructions:
 #Change just the two manifest_dir and containers_dir with the path in your file system exactly as its written here. I suggest using find and replace.
 #NOTE: Please use full path name and not ~ for your home dir because it matches the output that has full path.
 
