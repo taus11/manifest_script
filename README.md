@@ -1,4 +1,7 @@
 
+#Put this line in your ~/.bashrc : source ~/git/github/manifest_script/manifest.sh
+
+
 
 
 ***
