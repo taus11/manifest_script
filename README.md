@@ -1,6 +1,5 @@
-```
 ![black](https://user-images.githubusercontent.com/32044701/59132991-3f334300-8994-11e9-8782-c7c0eaecb020.jpg)
-```
+
 # HOW TO USE THIS SCRIPT:
 
 Put this line in your ~/.bashrc : source ~/git/github/manifest_script/manifest.sh
