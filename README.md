@@ -10,14 +10,14 @@ This will group and separate affects in terms of different products.
 
 
 EXAMPLES:
-
+```
 EXAMPLE 0 (Because arrays start at 0): Cat and dogs!
 
 Statement: I want to see both kernel-rt and kernel-alt
 
 Command:
 $manifest_search
-
+```
 EXAMPLE 1 :
 
 Statement: I want to see both kernel-rt and kernel-alt
