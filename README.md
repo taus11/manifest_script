@@ -1,4 +1,16 @@
-# functions
+
+
+
+***
+
+    echo
+    echo "NOTE: Do not use brackets, it skips important stuff if you want to filter out package-extra and package-python, you can do 'package-extra|python' after first argument. Add do you want to see an example function of cat with file.pnq sample file"
+    echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
+    echo ; echo "Also Make a practice to search:" ; echo "$ manifest_search '""solr[0-9]""' first, to find out packages like 'solr3' package"
+
+***
+upload it to PS tools git repo
+
 These are the work-simplifying scripts that I create and keep improving which keeps improving
 
 
@@ -70,7 +82,6 @@ $ manifest_search glib 'glibc|glibd|json|networking|dbus|json|tag|libvirt|libgit
 
 
 ====================== START =========================
-bash: [: -zi: unary operator expected
 
 2nd Filter
 Amazon/AMI/enterprise_linux:6/poppler-0.12.4-3.el6_0.1
@@ -109,3 +120,33 @@ manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|pyth
 manifest_search term1(what you want to have) term2(what you dont want to have)
 
 make sure you don't do term1 term1. term1-term2
+
+
+
+
+
+
+
+
+
+
+ADD THIS TO README
+
+<Tausif> lpardo, psampaio|AFK I get this output
+
+manifest_search  'php-[0-9]|rh-php[0-9][0-9]-php' 'pear|pecl|codeready|dropbox|ring|captcha|less|mod|kdevelop|zipstream|jmespath|zxcvbn|scss|xmp'
+
+wish I could show this result on my terminal where those PScomponents are highlighted. you can further | grep rhscl these to show all kinds of php stuff only for rhscl. So we don't really need a separate manifest. but we dont need to do that since psmodules like rhscl are already grouped and separated
+<Tausif> the script is a lil embarrasing now. But I will refine it and we all can try that in our next meeting.
+
+manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|python|utils'
+
+<Tausif> http://pastebin.test.redhat.com/767323 : This is what I do for kernel, which gets me kernel-5, kernel-rt, kernel-alt so that nothing is missed
+<Tausif> lpardo, ^^
+
+
+send this to thoger also as a reply to his mail Subject: [psr] Missing or incorrect flaw affects entries  
+
+Ask me: Hey I want to see these packages, I'll quickly form a command, and you'l quickly learn it.
+
+DO NOT Commit
