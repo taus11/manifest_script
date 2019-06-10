@@ -1,12 +1,8 @@
-##Instructions:
-#Change just the two manifest_dir and containers_dir with the path in your file system exactly as its written here. I suggest using find and replace.
-#NOTE: Please use full path name and not ~ for your home dir because it matches the output that has full path.
-
+# Change these two variables before using this script.
 manifest_dir=/home/msiddiqu/git/gitlab/manifests/*
 containers_dir=/home/msiddiqu/git/gitlab/manifests/containers
 
 function manifest_search {
-
     COLUMNS=$(tput cols)
     start=$(echo -e "\e[1m           ----START OF MANIFEST SEARCH----\e[0m")
     red=$(tput setaf 1)
@@ -17,7 +13,7 @@ function manifest_search {
     fi
 
     if [ $# == 1 ]; then
-          printf "\n\033[1;31m1st Filter ↓ \033[0m\n"
+          printf "\n\033[1;31m1st Filter ↴ \033[0m\n"
           egrep --exclude-dir=$containers_dir --exclude='manifest-eol.txt' -r -h -i -e "$1" $manifest_dir
     fi
     #
