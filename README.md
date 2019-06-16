@@ -50,8 +50,6 @@ $ manifest_search 'kernel-alt|kernel-rt'
 
 $ manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|python|utils'
 
-make sure you don't do term1 term1. term1-term2
-
 http://pastebin.test.redhat.com/767323 : This is what I do for kernel, which gets me kernel-5, kernel-rt, kernel-alt so that nothing is missed
 lpardo, ^^
 
@@ -69,7 +67,7 @@ Magic? No. See how entries are grouped and separated by community products and e
 
 ![wireshark](https://user-images.githubusercontent.com/32044701/59568228-88bb1680-9095-11e9-967b-abe0c84a4f8b.png)
 
-#Example 4: glib
+# Example 4: glib
 
 $ manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]'  separate
 
