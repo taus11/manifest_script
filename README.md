@@ -121,7 +121,7 @@ $ manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]' 'a
 
 OK that was easy, what about complex things like python urllib?
 
-- python and urllib: `manifest_search 'rh-python[0-9][0-9]-python-[0-9]|/python-[0-9]|/python-urllib[0-9]-[0-9]' separate`
+- python and urllib: `manifest_search 'rh-python[0-9][0-9]-python-[0-9]|/python-[0-9]|/python-urllib[0-9]-[0-9]' separated`
 
 
 # Tips:
@@ -159,13 +159,13 @@ OK that was easy, what about complex things like python urllib?
 
 - nodejs-static-eval: `manifest_search nodejs-static-eval 0/nodejs`
 
-- libjpeg-turbo: `manifest_search libjpeg-turbo separate`
+- libjpeg-turbo: `manifest_search libjpeg-turbo separated`
 
-- glib: `manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]'  separate`
+- glib: `manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]'  separated`
 
-- firefox: `manifest_search firefox-[0-9][0-9] separate `
+- firefox: `manifest_search firefox-[0-9][0-9] separated`
 
-- bootsrap-sass: `manifest_search bootstrap-sass separate `
+- bootsrap-sass: `manifest_search bootstrap-sass separated`
 
 
 
