@@ -29,12 +29,10 @@ $ manifest_search "cat-1|small-cat"
 
 Result:
 
-`
+```
 cat-1
-`
-`
 small-cat
-`
+```
 
 
 $ manifest_search wireshark separate
