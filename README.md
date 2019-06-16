@@ -11,19 +11,26 @@
 Simple as that.
 
 # Simple Example 1: Cats and dogs
-Add do you want to see an example function of cat with file.pnq sample file"
 
 You can simply write
+
+
 $ manifest_search wireshark separate
 This will group and separate affects in terms of different products.
 
-Statement: I want to see cat-white and cat-1 and small-cat
-file.pnq sample file
 
-Command:
-$ manifest_search
+# Real example 1: I want to see if we ship wireshark.
+
+`$ manifest_search wireshark`
+
+See what happens when you run;
+`$ manifest_search wireshark separated`
+
+Magic? No. See how entries are grouped and separated by PSmodules .It's easy on the eyes.
 
 **Screenshot**
+
+
 
 #EXAMPLE 2 : kernel
 
