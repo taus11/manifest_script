@@ -7,12 +7,12 @@ These are the work-simplifying scripts that I create and keep improving which ke
 2. Edit the manifest.sh file
   - Change just the two variables: `manifest_dir` and `containers_dir` in the manifest.sh  with the path in your file system exactly as it is written there. I suggest using find and replace.
   - Please use full path name and not ~ for your home dir because it matches the output that has full path.
-3. Run $echo source '/path/to/manifest.sh' >> ~/.bashrc
+3. Run `$echo source '/path/to/manifest.sh' >> ~/.bashrc`
 4. It will be usable whenever your terminal session starts. If you want to avoid restarting terminal,   just do $source '/path/to/manifest.sh
 
 # Usage with examples
 
-'manifest_search <show_these> <dont_show_these>'
+`manifest_search <show_these> <dont_show_these>`
 
 You can simply write
 $ manifest_search wireshark separate
