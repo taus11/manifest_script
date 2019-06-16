@@ -6,10 +6,13 @@
 4. It will be usable whenever your terminal session starts. If you want to avoid restarting terminal,   just do `$ source '/path/to/manifest.sh`
 
 # How to use:
-`$ manifest_search <show_these> <dont_show_these>`
+```
+$ manifest_search <show_these> <dont_show_these>
+```
 or
-`$ manifest_search <'show_this|and_this'> <dont_show_these>`
-
+```
+$ manifest_search <'show_this|and_this'> <dont_show_these>`
+```
 
 Simple as that.
 
