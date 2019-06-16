@@ -9,15 +9,15 @@
 ```
 $ manifest_search <show_these> <dont_show_these>
 ```
-or
+OR
 ```
-$ manifest_search <'show_this|and_this'> <dont_show_these>`
+$ manifest_search <'show_this|and_this'> <'dont_show_this|and_this'>
 ```
 
 Simple as that.
 
 # Simple Example 1: Cats and dogs
-Statement: I want to see cat-white and cat-1 and small-cat file.pnq sample file
+Statement: I want to see cat-white and cat-1 and small-cat.
 
 content of cats.txt:
 ```
@@ -41,8 +41,6 @@ small-cat
 ```
 
 
-$ manifest_search wireshark separate
-This will group and separate affects in terms of different products.
 
 #Example 2 : kernel : I want to see both kernel-rt and kernel-alt
 
@@ -66,7 +64,8 @@ $ manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|py
 See what happens when you run;
 `$ manifest_search wireshark separated`
 
-Magic? No. See how entries are grouped and separated by PSmodules .It's easy on the eyes.
+This will group and separate affects in terms of different products.
+Magic? No. See how entries are grouped and separated by community products and enterprise products .It's easy on the eyes.
 
 **Screenshot**
 
