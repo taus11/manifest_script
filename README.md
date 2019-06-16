@@ -2,7 +2,7 @@
 1. Clone this repo
 2. Edit the manifest.sh file
   - Change just the two variables: `manifest_dir` and `containers_dir` in the manifest.sh  with the corresponding paths in your file system exactly as it is written there. I suggest using find and replace.
-3. Run `$ echo source '/path/to/manifest.sh' >> ~/.bashrc`
+3. Run `$ echo source '/path/to/your/manifest_script/manifest.sh' >> ~/.bashrc`
 4. It will be usable whenever your terminal session starts. If you want to avoid restarting terminal,   just do `$ source '/path/to/manifest.sh`
 
 # How to use:
