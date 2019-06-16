@@ -131,7 +131,9 @@ $ manifest_search 'solr[0-9]' first, to find out packages like 'solr3' package
 
 - Notice the embedded `embedded:enterprise_linux:8/postgresql (in libpq, client libs only)` is also shown in the output, because of the first term. We're reducing human errors to avoid missing anything. `Gotta catch 'em all!` [I'm working to automate this part as well, so you don't have to write it]
 
-- mariadb: `manifest_search 'mariadb-|mariadb:[0-9][0-9].[0-9]/mariadb-|mariadb-galera|rh-mariadb[0-9][0-9][0-9]-mariadb' 'java|connector|client|container|apb|libs'
+- mariadb: `manifest_search 'mariadb-|mariadb:[0-9][0-9].[0-9]/mariadb-|mariadb-galera|rh-mariadb[0-9][0-9][0-9]-mariadb' 'java|connector|client|container|apb|libs|pax'
+`
+
 `
 - jackson-databind: `manifest_search 'jackson-databind-|rh-maven[0-9][0-9]-jackson-databind|rh-eclipse[0-9][0-9]-jackson-databind' `
 
@@ -140,3 +142,20 @@ $ manifest_search 'solr[0-9]' first, to find out packages like 'solr3' package
 - django: `manifest_search '/django[0-9][0-9]|/django-|python-django[0-9][0-9]|python-django-' 'python-django-[a-z]|django-[a-z]'`
 
 - okhttp: `manifest_search /okhttp-[0-9]`
+
+- pcre: `manifest_search 'mingw-pcre|pcre|mingw-pcre' 'container|alien|.dll|light|ocaml|regex|engine|pcre2`
+
+- systemd: `manifest_search systemd 'hook|puppet|journal|plugin|github|bootchart|python|kcm|libs'`
+
+- mysql: `manifest_search mysql 'apb|perl|Judy|java|rubygem|python|ipadic|connector|mecab|abp|lz4|multilib|auth|client|pax|puppet|storage|mmm|proxy|utilities|plugins|erlang|golang|groonga|report|tuner|pear|selinux|mysqlnd|plugin|nodejs|pam|tcl|lib|zrm|ocaml'
+`
+
+- nodejs-static-eval: `manifest_search nodejs-static-eval 0/nodejs`
+
+- libjpeg-turbo: `manifest_search libjpeg-turbo separate`
+
+- glib: `manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]'  separate`
+
+- firefox: `manifest_search firefox-[0-9][0-9] separate `
+
+- bootsrap-sass: `manifest_search bootstrap-sass separate `
