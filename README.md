@@ -31,7 +31,7 @@ rh-cat
 cat95-cat
 ```
 
-$ manifest_search "cat-1|small-cat"
+`$ manifest_search "cat-1|small-cat"`
 
 Result:
 
@@ -44,40 +44,45 @@ small-cat
 
 #Example 2 : kernel : I want to see both kernel-rt and kernel-alt
 
-$ manifest_search 'kernel-alt|kernel-rt'
+`$ manifest_search 'kernel-alt|kernel-rt'`
 
-**Screenshot**
+![kernel-alt|kernel-rt](https://user-images.githubusercontent.com/32044701/59568287-5f4eba80-9096-11e9-9598-5848f3ee0bd2.png)
 
+To view full kernel affects, try
 $ manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|python|utils'
 
-http://pastebin.test.redhat.com/767323 : This is what I do for kernel, which gets me kernel-5, kernel-rt, kernel-alt so that nothing is missed
-lpardo, ^^
-
-$ manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|python|utils'
+You'll see something like this: http://pastebin.test.redhat.com/772199
+This is what I do for kernel, which gets me kernel-5, kernel-rt, kernel-alt so that nothing is missed.
 
 # Example 3: I want to see if we ship wireshark.
 
 `$ manifest_search wireshark`
+![wireshark_unseparated](https://user-images.githubusercontent.com/32044701/59568324-bf456100-9096-11e9-9d46-4070acab77dd.png)
 
 See what happens when you run;
 `$ manifest_search wireshark separated`
 
 This will group and separate affects in terms of different products.
-Magic? No. See how entries are grouped and separated by community products and enterprise products .It's easy on the eyes.
+Magic? No. See how entries are grouped and separated by community products and enterprise products .It's easy on the eyes. This will happen for all the complex packages as well.
 
 ![wireshark](https://user-images.githubusercontent.com/32044701/59568228-88bb1680-9095-11e9-967b-abe0c84a4f8b.png)
 
+
+# Example 4: poppler
+
+`$ manifest_search poppler 'rubygem|sharp|zathura|compat|poppler-data|python|pypoppler'`
+![poppler](https://user-images.githubusercontent.com/32044701/59568423-23b4f000-9098-11e9-824f-f2c399c29408.png)
+
+The output that you see here, will directly go in to the affects section of `$sfm2 flaw create`. You don't need to find the needle in a haystack. Some day, we can have that automation.
+
 # Example 4: glib
 
-$ manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]'  separate
+$ manifest_search glib 'glibc|glibd|json|networking|dbus|json|tag|libvirt|libgit|geocode|libappstream|glibmm|cglib|telepathy|perl|snapd|ghc|python|libac|libgs|template|signon|pcre|rubygem|rust|java|spglib|alglib|codeready|amazon'
 
-Use the keyword separate to view a grouped easy on the eyes affects
+Do I have to type so much? No, The above command is the same as the one below, which is very easy once you start using this script. Once you're aware how this works, you'll start using your intelligence and optimise the commands. 
 
-is the same as
+$ manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]' 'amazon|codeready'
 
-$ manifest_search glib 'glibc|glibd|json|networking|dbus|json|tag|libvirt|libgit|geocode|libappstream|glibmm|cglib|telepathy|perl|snapd|ghc|python|libac|libgs|template|signon|pcre|rubygem|rust|java|spglib|alglib|codeready'
-
-1. $ manifest_search poppler 'rubygem|sharp|zathura|compat|poppler-data|python|pypoppler'
 
 #EXAMPLE 4:
 Problem statement:
