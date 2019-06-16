@@ -7,6 +7,9 @@
 
 # How to use:
 `$ manifest_search <show_these> <dont_show_these>`
+or
+`$ manifest_search <'show_this|and_this'> <dont_show_these>`
+
 
 Simple as that.
 
