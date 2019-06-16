@@ -168,3 +168,16 @@ $ manifest_search 'solr[0-9]' first, to find out packages like 'solr3' package
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
+
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+
+| manifes | 'asd'asd'as |
+|---------|-------------|
+|         |             |
+|         |             |
+|         |             |
