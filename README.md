@@ -11,15 +11,48 @@
 Simple as that.
 
 # Simple Example 1: Cats and dogs
+Statement: I want to see cat-white and cat-1 and small-cat file.pnq sample file
 
-You can simply write
+content of cats.txt:
+`
+cat-white
+cat-1
+small-cat
+cat
+big-cat
+cat-is-god
+rh-cat
+cat95-cat
+`
+$ manifest_search "cat-1|small-cat"
+
+Result:
+
+`
+cat-1
+small-cat
+`
 
 
 $ manifest_search wireshark separate
 This will group and separate affects in terms of different products.
 
+#Example 2 : kernel : I want to see both kernel-rt and kernel-alt
 
-# Real example 1: I want to see if we ship wireshark.
+$ manifest_search 'kernel-alt|kernel-rt'
+
+**Screenshot**
+
+$ manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|python|utils'
+
+make sure you don't do term1 term1. term1-term2
+
+http://pastebin.test.redhat.com/767323 : This is what I do for kernel, which gets me kernel-5, kernel-rt, kernel-alt so that nothing is missed
+lpardo, ^^
+
+$ manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|python|utils'
+
+# Example 3: I want to see if we ship wireshark.
 
 `$ manifest_search wireshark`
 
@@ -31,29 +64,9 @@ Magic? No. See how entries are grouped and separated by PSmodules .It's easy on 
 **Screenshot**
 
 
+#Example 4: glib
 
-#EXAMPLE 2 : kernel
-
-Statement: I want to see both kernel-rt and kernel-alt
-
-$ manifest_search 'kernel-alt|kernel-rt'
-
-**Screenshot**
-
-manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|python|utils'
-
-manifest_search term1(what you want to have) term2(what you dont want to have)
-
-make sure you don't do term1 term1. term1-term2
-
-http://pastebin.test.redhat.com/767323 : This is what I do for kernel, which gets me kernel-5, kernel-rt, kernel-alt so that nothing is missed
-lpardo, ^^
-
-manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|python|utils'
-
-#EXAMPLE 3:
-
-manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]'  separate
+$ manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]'  separate
 
 Use the keyword separate to view a grouped easy on the eyes affects
 
@@ -68,9 +81,30 @@ Problem statement:
 
 lpardo, psampaio|AFK I get this output
 
-manifest_search  'php-[0-9]|rh-php[0-9][0-9]-php' 'pear|pecl|codeready|dropbox|ring|captcha|less|mod|kdevelop|zipstream|jmespath|zxcvbn|scss|xmp'
+$ manifest_search  'php-[0-9]|rh-php[0-9][0-9]-php' 'pear|pecl|codeready|dropbox|ring|captcha|less|mod|kdevelop|zipstream|jmespath|zxcvbn|scss|xmp'
 
 OK that was easy, what about complex things like python urllib php
+
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
 
 # Tasks to do:
 - upload it to PS tools git repo
