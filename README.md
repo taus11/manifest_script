@@ -172,9 +172,4 @@ $ manifest_search 'solr[0-9]' first, to find out packages like 'solr3' package
 
 | First Header  | Second Header |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-
-
-| manifes | 'asd'asd'as |
 | bootsrap-sass: | `manifest_search bootstrap-sass separate ` |
