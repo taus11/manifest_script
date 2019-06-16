@@ -85,7 +85,7 @@ Magic? No. See how entries are grouped and separated by community products and e
 
 The output that you see here, will directly go in to the affects section of `$sfm2 flaw create`. You don't need to find the needle in a haystack. Some day, we can have that automation.
 
-# Example 4: glib
+# Example 5: glib
 
 $ manifest_search glib 'glibc|glibd|json|networking|dbus|json|tag|libvirt|libgit|geocode|libappstream|glibmm|cglib|telepathy|perl|snapd|ghc|python|libac|libgs|template|signon|pcre|rubygem|rust|java|spglib|alglib|codeready|amazon'
 
@@ -94,12 +94,15 @@ Do I have to type so much? No, The above command is the same as the one below, w
 $ manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]' 'amazon|codeready'
 
 
-#EXAMPLE 4:
+# EXAMPLE 6:
 Problem statement:
 
 lpardo, psampaio|AFK I get this output
 
 $ manifest_search  'php-[0-9]|rh-php[0-9][0-9]-php' 'pear|pecl|codeready|dropbox|ring|captcha|less|mod|kdevelop|zipstream|jmespath|zxcvbn|scss|xmp'
+
+
+# Example 7:
 
 OK that was easy, what about complex things like python urllib php
 
@@ -124,12 +127,25 @@ $ manifest_search 'solr[0-9]' first, to find out packages like 'solr3' package
         -. Optimise for packages like python : http://localhost:5600/static/#/flaw/1631420
         -.    automatically do this in first filter :  echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
 
+
+# Problem:
+```
+<lpardo>        the problem is when we like grep -Eir php-[0-9]
+<Tausif>        hm hm
+<lpardo>        we don't get matches like rh-php70-php
+```
+
+# Solution:
+- php: `manifest_search  'php-[0-9]|rh-php[0-9][0-9]-php' 'pear|pecl|codeready|dropbox|ring|captcha|less|mod|kdevelop|zipstream|jmespath|zxcvbn|scss|xmp'``
+
 # More commands : We can have a collection of these!
 
 - postgresql: `manifest_search 'postgresql [(]in|postgresql-[0-9]|postgresql.jar|mingw-postgresql|rh-postgresql[0-9][0-9]-postgresql|postgresql[0-9][0-9]|postgresql[0-9][0-9]-postgresql' 'libs-|repmgr|apb|pglogical|jdbc|odbc|testing|perl|spacewalk|PGDG'
 `
 
-- Notice the embedded `embedded:enterprise_linux:8/postgresql (in libpq, client libs only)` is also shown in the output, because of the first term. We're reducing human errors to avoid missing anything. `Gotta catch 'em all!` [I'm working to automate this part as well, so you don't have to write it]
+- Notice the embedded `embedded:enterprise_linux:8/postgresql (in libpq, client libs only)` is also shown in the output, because of the first term. We're reducing human errors to avoid missing anything. `Gotta catch 'em all!`  Try doing it for gd ;) [I'm working to automate this part as well, so you don't have to write it].
+
+
 
 - mariadb: `manifest_search 'mariadb-|mariadb:[0-9][0-9].[0-9]/mariadb-|mariadb-galera|rh-mariadb[0-9][0-9][0-9]-mariadb' 'java|connector|client|container|apb|libs|pax'
 `
