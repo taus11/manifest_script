@@ -1,6 +1,6 @@
 These are the work-simplifying scripts that I create and keep improving which keeps improving.
 
-# Instructions to install:
+# How to install:
 1. Clone this repo
 2. Edit the manifest.sh file
   - Change just the two variables: `manifest_dir` and `containers_dir` in the manifest.sh  with the corresponding paths in your file system exactly as it is written there. I suggest using find and replace in your favourite text editor.
@@ -83,24 +83,36 @@ Magic? No. See how entries are grouped and separated by community products and e
 `$ manifest_search poppler 'rubygem|sharp|zathura|compat|poppler-data|python|pypoppler|utils''`
 ![poppler_1](https://user-images.githubusercontent.com/32044701/59568603-9a52ed00-909a-11e9-8bfc-bc0ca8bad61c.png)
 
-The output that you see here, will directly go in to the affects section of `$sfm2 flaw create`. You don't need to find the needle in a haystack. Some day, we can have that automation.
+The output that you see here, will directly go in to the affects section of `$sfm2 flaw create`. You don't need to find the needle in a haystack. Some day, we can have that automation for #incoming
 
 # Example 5: glib
 
+```
 $ manifest_search glib 'glibc|glibd|json|networking|dbus|json|tag|libvirt|libgit|geocode|libappstream|glibmm|cglib|telepathy|perl|snapd|ghc|python|libac|libgs|template|signon|pcre|rubygem|rust|java|spglib|alglib|codeready|amazon'
+```
 
 Do I have to type so much? No, The above command is the same as the one below, which is very easy once you start using this script. Once you're aware how this works, you'll start using your intelligence and optimise the commands.
 
+```
 $ manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]' 'amazon|codeready'
+```
 
 
-# Example 6
+
+
+
+
+# Example 6: A problem is a use case.
 
 - Problem statement:
 
-lpardo, psampaio|AFK I get this output
-
-$ manifest_search  'php-[0-9]|rh-php[0-9][0-9]-php' 'pear|pecl|codeready|dropbox|ring|captcha|less|mod|kdevelop|zipstream|jmespath|zxcvbn|scss|xmp'
+```
+<lpardo>        the problem is when we like grep -Eir php-[0-9]
+<Tausif>        hm hm
+<lpardo>        we don't get matches like rh-php70-php
+```
+# Solution:
+- php: `manifest_search  'php-[0-9]|rh-php[0-9][0-9]-php' 'pear|pecl|codeready|dropbox|ring|captcha|less|mod|kdevelop|zipstream|jmespath|zxcvbn|scss|xmp'``
 
 
 # Example 7:
@@ -128,21 +140,6 @@ $ manifest_search 'solr[0-9]' first, to find out packages like 'solr3' package
         -. Optimise for packages like python : http://localhost:5600/static/#/flaw/1631420
         -.    automatically do this in first filter :  echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
 
-
-# Problem:
-
-# Example 6
-
-- Problem statement:
-
-```
-<lpardo>        the problem is when we like grep -Eir php-[0-9]
-<Tausif>        hm hm
-<lpardo>        we don't get matches like rh-php70-php
-```
-
-# Solution:
-- php: `manifest_search  'php-[0-9]|rh-php[0-9][0-9]-php' 'pear|pecl|codeready|dropbox|ring|captcha|less|mod|kdevelop|zipstream|jmespath|zxcvbn|scss|xmp'``
 
 
 # More commands : #incoming, we can have a collection of these!
