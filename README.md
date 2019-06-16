@@ -1,13 +1,9 @@
-# README:
-
-These are the work-simplifying scripts that I create and keep improving which keeps us improving.
-
 # Instructions to install:
 1. Clone this repo
 2. Edit the manifest.sh file
   - Change just the two variables: `manifest_dir` and `containers_dir` in the manifest.sh  with the corresponding paths in your file system exactly as it is written there. I suggest using find and replace.
 3. Run `$ echo source '/path/to/manifest.sh' >> ~/.bashrc`
-4. It will be usable whenever your terminal session starts. If you want to avoid restarting terminal,   just do $ source '/path/to/manifest.sh
+4. It will be usable whenever your terminal session starts. If you want to avoid restarting terminal,   just do `$ source '/path/to/manifest.sh`
 
 # How to use:
 `$ manifest_search <show_these> <dont_show_these>`
@@ -15,13 +11,11 @@ These are the work-simplifying scripts that I create and keep improving which ke
 Simple as that.
 
 # Simple Example 1: Cats and dogs
+Add do you want to see an example function of cat with file.pnq sample file"
 
-     Add do you want to see an example function of cat with file.pnq sample file"
-
-
-     You can simply write
-     $ manifest_search wireshark separate
-     This will group and separate affects in terms of different products.
+You can simply write
+$ manifest_search wireshark separate
+This will group and separate affects in terms of different products.
 
 Statement: I want to see cat-white and cat-1 and small-cat
 file.pnq sample file
