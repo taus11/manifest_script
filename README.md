@@ -14,7 +14,7 @@ Simple as that.
 Statement: I want to see cat-white and cat-1 and small-cat file.pnq sample file
 
 content of cats.txt:
-`
+```
 cat-white
 cat-1
 small-cat
@@ -23,7 +23,8 @@ big-cat
 cat-is-god
 rh-cat
 cat95-cat
-`
+```
+
 $ manifest_search "cat-1|small-cat"
 
 Result:
