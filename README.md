@@ -119,30 +119,15 @@ $ manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]' 'a
 
 # Example 7:
 
-OK that was easy, what about complex things like python urllib php
+OK that was easy, what about complex things like python urllib?
+
+- python and urllib: `manifest_search 'rh-python[0-9][0-9]-python-[0-9]|/python-[0-9]|/python-urllib[0-9]-[0-9]' separate`
+
 
 # Tips:
   - You can change the function name `manifest_search` to whatever you were already used to before to be more comfortable. But first use it and get some hands on.
   - If in doubt of any specific package, ask me: Hey, I want to see these packages, I'll quickly form a command, give it to you and you'll quickly learn it.
   - you can further `| grep rhscl` these to show all kinds of php stuff only for rhscl. So we don't really need a separate manifest(🤔) But we don't need to do that since PSmodules like rhscl are already grouped and separated.
-
-
-# sort
-echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
-echo ; echo "Also Make a practice to search:" ; echo "$ manifest_search '""solr[0-9]""' first, to find out packages like 'solr3' package"
-
-# Tasks to do:
-Make a practice to search:
-$ manifest_search '/gd ' first, to find out packages like 'gd (in php)'
-Also Make a practice to search:
-$ manifest_search 'solr[0-9]' first, to find out packages like 'solr3' package
-
-        - upload it to PS tools git repo
-        - Email to incoming. send this to thoger also as a reply to his mail Subject: [psr] Missing or incorrect flaw affects entries  
-        -. Optimise for packages like python : http://localhost:5600/static/#/flaw/1631420
-        -.    automatically do this in first filter :  echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
-
-
 
 # More commands : #incoming, we can have a collection of these!
 
@@ -181,3 +166,37 @@ $ manifest_search 'solr[0-9]' first, to find out packages like 'solr3' package
 - firefox: `manifest_search firefox-[0-9][0-9] separate `
 
 - bootsrap-sass: `manifest_search bootstrap-sass separate `
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# sort
+echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
+echo ; echo "Also Make a practice to search:" ; echo "$ manifest_search '""solr[0-9]""' first, to find out packages like 'solr3' package"
+
+# Tasks to do:
+Make a practice to search:
+$ manifest_search '/gd ' first, to find out packages like 'gd (in php)'
+Also Make a practice to search:
+$ manifest_search 'solr[0-9]' first, to find out packages like 'solr3' package
+
+        - upload it to PS tools git repo
+        - Email to incoming. send this to thoger also as a reply to his mail Subject: [psr] Missing or incorrect flaw affects entries  
+        -. Optimise for packages like python : http://localhost:5600/static/#/flaw/1631420
+        -.    automatically do this in first filter :  echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'"
