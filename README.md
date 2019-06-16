@@ -127,7 +127,7 @@ OK that was easy, what about complex things like python urllib?
 # Tips:
   - You can change the function name `manifest_search` to whatever you were already used to before to be more comfortable. But first use it and get some hands on.
   - If in doubt of any specific package, ask me: Hey, I want to see these packages, I'll quickly form a command, give it to you and you'll quickly learn it.
-  - you can further `| grep rhscl` these to show all kinds of php stuff only for rhscl. So we don't really need a separate manifest(🤔) But we don't need to do that since PSmodules like rhscl are already grouped and separated.
+  - you can further `| grep rhscl` these to show all kinds of php stuff only for rhscl. So we don't really need a separate manifest(🤔) .But we don't even need to do that since PSmodules like rhscl are already grouped and separated.
 
 # More commands : #incoming, we can have a collection of these!
 
