@@ -130,7 +130,7 @@ postgresql: `manifest_search 'postgresql [(]in|postgresql-[0-9]|postgresql.jar|m
 `
 Notice the embedded `embedded:enterprise_linux:8/postgresql (in libpq, client libs only)` is also shown in the output, because of the first term. We're reducing human errors to avoid missing anything. `Gotta catch 'em all!` I'm working to automate this.
 
-mariadb: `manifest_search 'mariadb-|mariadb:[0-9][0-9].[0-9]/mariadb-|mariadb-galera|rh-mariadb[0-9][0-9][0-9]-mariadb' 'java|connector|client|container|apb|libs'
+- mariadb: `manifest_search 'mariadb-|mariadb:[0-9][0-9].[0-9]/mariadb-|mariadb-galera|rh-mariadb[0-9][0-9][0-9]-mariadb' 'java|connector|client|container|apb|libs'
 `
 jackson-databind: `manifest_search 'jackson-databind-|rh-maven[0-9][0-9]-jackson-databind|rh-eclipse[0-9][0-9]-jackson-databind' `
 
