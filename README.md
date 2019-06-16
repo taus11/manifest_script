@@ -114,6 +114,8 @@ $ manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]' 'a
 # Solution:
 - php: `manifest_search  'php-[0-9]|rh-php[0-9][0-9]-php' 'pear|pecl|codeready|dropbox|ring|captcha|less|mod|kdevelop|zipstream|jmespath|zxcvbn|scss|xmp'`
 
+![php](https://user-images.githubusercontent.com/32044701/59569556-eefd6480-90a8-11e9-9eaa-211a50c3800b.png)
+
 
 # Example 7:
 
