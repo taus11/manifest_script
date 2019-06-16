@@ -49,7 +49,7 @@ You can also power use regex to see all versions of cat- as well as small-cat.
 
 
 
-#Example 2 : kernel : I want to see both kernel-rt and kernel-alt
+# Example 2 : kernel : I want to see both kernel-rt and kernel-alt
 
 `$ manifest_search 'kernel-alt|kernel-rt'`
 
@@ -94,7 +94,7 @@ Do I have to type so much? No, The above command is the same as the one below, w
 $ manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]' 'amazon|codeready'
 
 
-#Example 6
+# Example 6
 
 - Problem statement:
 
@@ -107,13 +107,13 @@ $ manifest_search  'php-[0-9]|rh-php[0-9][0-9]-php' 'pear|pecl|codeready|dropbox
 
 OK that was easy, what about complex things like python urllib php
 
-#Tips:
+# Tips:
   - You can change the function name `manifest_search` to whatever you were already used to before to be more comfortable. But first use it and get some hands on.
   - If in doubt of any specific package, ask me: Hey, I want to see these packages, I'll quickly form a command, give it to you and you'll quickly learn it.
   - you can further `| grep rhscl` these to show all kinds of php stuff only for rhscl. So we don't really need a separate manifest(🤔) But we don't need to do that since PSmodules like rhscl are already grouped and separated.
 
 
-#sort
+# sort
 echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
 echo ; echo "Also Make a practice to search:" ; echo "$ manifest_search '""solr[0-9]""' first, to find out packages like 'solr3' package"
 
@@ -131,7 +131,7 @@ $ manifest_search 'solr[0-9]' first, to find out packages like 'solr3' package
 
 # Problem:
 
-#Example 6
+# Example 6
 
 - Problem statement:
 
