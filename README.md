@@ -55,8 +55,10 @@ You can also power use regex to see all versions of cat- as well as small-cat.
 
 ![kernel-alt|kernel-rt](https://user-images.githubusercontent.com/32044701/59568287-5f4eba80-9096-11e9-9598-5848f3ee0bd2.png)
 
-To view full kernel affects, try
-`$ manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|python|utils'`
+To view all kernel affects, try:
+
+```$ manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|python|utils'
+```
 
 You'll see something like this: http://pastebin.test.redhat.com/772199
 This is what I do for kernel, which gets me kernel-5, kernel-rt, kernel-alt so that nothing is missed.
@@ -71,7 +73,7 @@ See what happens when you run;
 
 ![wireshark](https://user-images.githubusercontent.com/32044701/59568228-88bb1680-9095-11e9-967b-abe0c84a4f8b.png)
 
-This will group and separate affects in terms of different products.
+This will group and separate affects in terms of different products like Fedora, Enterprise Linux, Openshift, etc.
 Magic? No. See how entries are grouped and separated by community products and enterprise products .It's easy on the eyes. This will happen for all the complex packages as well.
 
 
