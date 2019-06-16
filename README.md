@@ -103,39 +103,35 @@ $ manifest_search  'php-[0-9]|rh-php[0-9][0-9]-php' 'pear|pecl|codeready|dropbox
 
 OK that was easy, what about complex things like python urllib php
 
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-
-# Tasks to do:
-- upload it to PS tools git repo
-- Email to incoming. send this to thoger also as a reply to his mail Subject: [psr] Missing or incorrect flaw affects entries  
--. Optimise for packages like python : http://localhost:5600/static/#/flaw/1631420
--.    automatically do this in first filter :  echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
-
 #Tips:
   - You can change the function name `manifest_search` to whatever you were already used to before to be more comfortable. But first use it and get some hands on.
   - If in doubt of any specific package, ask me: Hey, I want to see these packages, I'll quickly form a command, give it to you and you'll quickly learn it.
-  - you can further `| grep rhscl` these to show all kinds of php stuff only for rhscl. So we don't really need a separate manifest(🤔). but we dont need to do that since psmodules like rhscl are already grouped and separated
+  - you can further `| grep rhscl` these to show all kinds of php stuff only for rhscl. So we don't really need a separate manifest(🤔) But we don't need to do that since PSmodules like rhscl are already grouped and separated.
+
 
 #sort
-    echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
+echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
+echo ; echo "Also Make a practice to search:" ; echo "$ manifest_search '""solr[0-9]""' first, to find out packages like 'solr3' package"
 
-    echo ; echo "Also Make a practice to search:" ; echo "$ manifest_search '""solr[0-9]""' first, to find out packages like 'solr3' package"
+# Tasks to do:
+Make a practice to search:
+$ manifest_search '/gd ' first, to find out packages like 'gd (in php)'
+Also Make a practice to search:
+$ manifest_search 'solr[0-9]' first, to find out packages like 'solr3' package
+
+        - upload it to PS tools git repo
+        - Email to incoming. send this to thoger also as a reply to his mail Subject: [psr] Missing or incorrect flaw affects entries  
+        -. Optimise for packages like python : http://localhost:5600/static/#/flaw/1631420
+        -.    automatically do this in first filter :  echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
+
+# More commands : We can have a collection of these!
+
+postgresql: `manifest_search 'postgresql [(]in|postgresql-[0-9]|postgresql.jar|mingw-postgresql|rh-postgresql[0-9][0-9]-postgresql|postgresql[0-9][0-9]|postgresql[0-9][0-9]-postgresql' 'libs-|repmgr|apb|pglogical|jdbc|odbc|testing|perl|spacewalk|PGDG'
+`
+Notice the embedded `embedded:enterprise_linux:8/postgresql (in libpq, client libs only)` is also shown in the output, because of the first term. We're reducing human errors to avoid missing anything. `Gotta catch 'em all!` I'm working to automate this.
+
+mariadb: `manifest_search 'mariadb-|mariadb:[0-9][0-9].[0-9]/mariadb-|mariadb-galera|rh-mariadb[0-9][0-9][0-9]-mariadb' 'java|connector|client|container|apb|libs'
+`
+jackson-databind: `manifest_search 'jackson-databind-|rh-maven[0-9][0-9]-jackson-databind|rh-eclipse[0-9][0-9]-jackson-databind' `
+
+jquery: `manifest_search 'jquery|jquery[0-9]|jquery-|js-jquery[0-9]|js-jquery-|js-jquery[0-9]|js-jquery|python-XStatic-jQuery|epel-all|python-tw[0-9]-jquery|rubygem-jquery-rails|ruby[0-9][0-9][0-9]-rubygem-jquery-rails|ruby[0-9][0-9][0-9]-rubygem-jquery-ui-rails|tfm-rubygem-jquery-ui-rails|rh-ror[0-9][0-9]-rubygem-jquery-rails' 'Migrate|table|quicksearch|kibana|mouse|punch|upload|file|iframe|pretty|knob|jstree|datetime|qrcode|jqplot|noty|detached|hotkeys|ded3d|conventional|sizzle'`
