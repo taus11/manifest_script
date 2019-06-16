@@ -131,9 +131,9 @@ OK that was easy, what about complex things like python urllib php
 -.    automatically do this in first filter :  echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
 
 #Tips:
-  - You can change the function name manifest_search to whatever you were already used to before to be more comfortable. But first use it and get some hands on.
-  - Ask me: Hey I want to see these packages, I'll quickly form a command, and you'l quickly learn it.
-  - you can further | grep rhscl these to show all kinds of php stuff only for rhscl. So we don't really need a separate manifest. but we dont need to do that since psmodules like rhscl are already grouped and separated
+  - You can change the function name `manifest_search` to whatever you were already used to before to be more comfortable. But first use it and get some hands on.
+  - If in doubt of any specific package, ask me: Hey, I want to see these packages, I'll quickly form a command, give it to you and you'll quickly learn it.
+  - you can further `| grep rhscl` these to show all kinds of php stuff only for rhscl. So we don't really need a separate manifest(🤔). but we dont need to do that since psmodules like rhscl are already grouped and separated
 
 #sort
     echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
