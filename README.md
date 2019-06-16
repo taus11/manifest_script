@@ -5,7 +5,7 @@ These are the work-simplifying scripts that I create and keep improving which ke
 # Instructions to install:
 1. Clone this repo
 2. Edit the manifest.sh file
-  - Change just the two manifest_dir and containers_dir in the manifest.sh  with the path in your file system exactly as its written there. I suggest using find and replace.
+  - Change just the two variables: `manifest_dir` and `containers_dir` in the manifest.sh  with the path in your file system exactly as its written there. I suggest using find and replace.
   - Please use full path name and not ~ for your home dir because it matches the output that has full path.
 3. echo source '/path/to/manifest.sh' >> ~/.bashrc
 4. It will be usable whenever your terminal session starts. If you want to avoid restarting terminal,   just do $source '/path/to/manifest.sh
