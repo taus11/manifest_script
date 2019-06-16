@@ -3,6 +3,7 @@ manifest_dir=/home/msiddiqu/git/gitlab/manifests/*
 containers_dir=/home/msiddiqu/git/gitlab/manifests/containers
 
 function manifest_search {
+    echo
     COLUMNS=$(tput cols)
     start=$(echo -e "\e[1m           ----START OF MANIFEST SEARCH----\e[0m")
     red=$(tput setaf 1)

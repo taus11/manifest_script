@@ -3,9 +3,9 @@ These are the work-simplifying scripts that I create and keep improving which ke
 # Instructions to install:
 1. Clone this repo
 2. Edit the manifest.sh file
-  - Change just the two variables: `manifest_dir` and `containers_dir` in the manifest.sh  with the corresponding paths in your file system exactly as it is written there. I suggest using find and replace.
-3. Run `$ echo source '/path/to/your/manifest_script/manifest.sh' >> ~/.bashrc`
-4. It will be usable whenever your terminal session starts. If you want to avoid restarting terminal,   just do `$ source '/path/to/manifest.sh`
+  - Change just the two variables: `manifest_dir` and `containers_dir` in the manifest.sh  with the corresponding paths in your file system exactly as it is written there. I suggest using find and replace in your favourite text editor.
+3. Run `$ echo source '/path/to/your_cloned/manifest_script/manifest.sh' >> ~/.bashrc`
+4. The script will be usable whenever your terminal session starts. If you want to avoid restarting terminal,   just do `$ source 'path/to/your_cloned/manifest_script/manifest.sh'`
 
 # How to use:
 ```
@@ -18,7 +18,7 @@ $ manifest_search <'show_this|and_this'> <'dont_show_this|and_this'>
 
 Simple as that.
 
-# Simple Example 1: Cats and dogs
+# Example 1: Cats and dogs
 Statement: I want to see cat-white and cat-1 and small-cat.
 
 content of cats.txt:
@@ -41,6 +41,11 @@ Result:
 cat-1
 small-cat
 ```
+
+You can also power use regex to see all versions of cat- as well as small-cat.
+
+`$ manifest_search "cat-[0-9]|small-cat"`
+
 
 
 
@@ -72,8 +77,8 @@ Magic? No. See how entries are grouped and separated by community products and e
 
 # Example 4: poppler
 
-`$ manifest_search poppler 'rubygem|sharp|zathura|compat|poppler-data|python|pypoppler'`
-![poppler](https://user-images.githubusercontent.com/32044701/59568423-23b4f000-9098-11e9-824f-f2c399c29408.png)
+`$ manifest_search poppler 'rubygem|sharp|zathura|compat|poppler-data|python|pypoppler|utils''`
+![poppler_1](https://user-images.githubusercontent.com/32044701/59568603-9a52ed00-909a-11e9-8bfc-bc0ca8bad61c.png)
 
 The output that you see here, will directly go in to the affects section of `$sfm2 flaw create`. You don't need to find the needle in a haystack. Some day, we can have that automation.
 
