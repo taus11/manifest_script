@@ -1,4 +1,4 @@
-# Change these two variables before using this script.
+# Change these two variables before using this script.  Please use absulute full path name and NOT ~ for your home directory because it matches the output that has full path.
 manifest_dir=/home/msiddiqu/git/gitlab/manifests/*
 containers_dir=/home/msiddiqu/git/gitlab/manifests/containers
 
