@@ -96,11 +96,7 @@ Do I have to type so much? No, The above command is the same as the one below, w
 ```
 $ manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]' 'amazon|codeready'
 ```
-
-
-
-
-
+![glib](https://user-images.githubusercontent.com/32044701/59569665-74354900-90aa-11e9-9e55-4e3b7708b89d.png)
 
 # Example 6: A problem is a use case.
 
