@@ -159,3 +159,12 @@ $ manifest_search 'solr[0-9]' first, to find out packages like 'solr3' package
 - firefox: `manifest_search firefox-[0-9][0-9] separate `
 
 - bootsrap-sass: `manifest_search bootstrap-sass separate `
+
+
+
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
