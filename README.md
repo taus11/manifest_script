@@ -128,7 +128,8 @@ $ manifest_search 'solr[0-9]' first, to find out packages like 'solr3' package
 
 - postgresql: `manifest_search 'postgresql [(]in|postgresql-[0-9]|postgresql.jar|mingw-postgresql|rh-postgresql[0-9][0-9]-postgresql|postgresql[0-9][0-9]|postgresql[0-9][0-9]-postgresql' 'libs-|repmgr|apb|pglogical|jdbc|odbc|testing|perl|spacewalk|PGDG'
 `
-Notice the embedded `embedded:enterprise_linux:8/postgresql (in libpq, client libs only)` is also shown in the output, because of the first term. We're reducing human errors to avoid missing anything. `Gotta catch 'em all!` I'm working to automate this.
+
+- Notice the embedded `embedded:enterprise_linux:8/postgresql (in libpq, client libs only)` is also shown in the output, because of the first term. We're reducing human errors to avoid missing anything. `Gotta catch 'em all!` [I'm working to automate this part as well, so you don't have to write it]
 
 - mariadb: `manifest_search 'mariadb-|mariadb:[0-9][0-9].[0-9]/mariadb-|mariadb-galera|rh-mariadb[0-9][0-9][0-9]-mariadb' 'java|connector|client|container|apb|libs'
 `
@@ -136,8 +137,6 @@ Notice the embedded `embedded:enterprise_linux:8/postgresql (in libpq, client li
 
 - jquery: `manifest_search 'jquery|jquery[0-9]|jquery-|js-jquery[0-9]|js-jquery-|js-jquery[0-9]|js-jquery|python-XStatic-jQuery|epel-all|python-tw[0-9]-jquery|rubygem-jquery-rails|ruby[0-9][0-9][0-9]-rubygem-jquery-rails|ruby[0-9][0-9][0-9]-rubygem-jquery-ui-rails|tfm-rubygem-jquery-ui-rails|rh-ror[0-9][0-9]-rubygem-jquery-rails' 'Migrate|table|quicksearch|kibana|mouse|punch|upload|file|iframe|pretty|knob|jstree|datetime|qrcode|jqplot|noty|detached|hotkeys|ded3d|conventional|sizzle'`
 
-
--django: `manifest_search '/django[0-9][0-9]|/django-|python-django[0-9][0-9]|python-django-' 'python-django-[a-z]|django-[a-z]'`
-
+- django: `manifest_search '/django[0-9][0-9]|/django-|python-django[0-9][0-9]|python-django-' 'python-django-[a-z]|django-[a-z]'`
 
 - okhttp: `manifest_search /okhttp-[0-9]`
