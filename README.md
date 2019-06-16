@@ -94,8 +94,9 @@ Do I have to type so much? No, The above command is the same as the one below, w
 $ manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]' 'amazon|codeready'
 
 
-# EXAMPLE 6:
-Problem statement:
+#Example 6
+
+- Problem statement:
 
 lpardo, psampaio|AFK I get this output
 
@@ -129,6 +130,11 @@ $ manifest_search 'solr[0-9]' first, to find out packages like 'solr3' package
 
 
 # Problem:
+
+#Example 6
+
+- Problem statement:
+
 ```
 <lpardo>        the problem is when we like grep -Eir php-[0-9]
 <Tausif>        hm hm
@@ -138,7 +144,8 @@ $ manifest_search 'solr[0-9]' first, to find out packages like 'solr3' package
 # Solution:
 - php: `manifest_search  'php-[0-9]|rh-php[0-9][0-9]-php' 'pear|pecl|codeready|dropbox|ring|captcha|less|mod|kdevelop|zipstream|jmespath|zxcvbn|scss|xmp'``
 
-# More commands : We can have a collection of these!
+
+# More commands : #incoming, we can have a collection of these!
 
 - postgresql: `manifest_search 'postgresql [(]in|postgresql-[0-9]|postgresql.jar|mingw-postgresql|rh-postgresql[0-9][0-9]-postgresql|postgresql[0-9][0-9]|postgresql[0-9][0-9]-postgresql' 'libs-|repmgr|apb|pglogical|jdbc|odbc|testing|perl|spacewalk|PGDG'
 `
