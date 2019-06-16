@@ -57,7 +57,8 @@ You can also power use regex to see all versions of cat- as well as small-cat.
 
 To view all kernel affects, try:
 
-```$ manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|python|utils'
+```
+$ manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|python|utils'
 ```
 
 You'll see something like this: http://pastebin.test.redhat.com/772199
