@@ -1,3 +1,5 @@
+These are the work-simplifying scripts that I create and keep improving which keeps improving.
+
 # Instructions to install:
 1. Clone this repo
 2. Edit the manifest.sh file
@@ -49,7 +51,7 @@ small-cat
 ![kernel-alt|kernel-rt](https://user-images.githubusercontent.com/32044701/59568287-5f4eba80-9096-11e9-9598-5848f3ee0bd2.png)
 
 To view full kernel affects, try
-$ manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|python|utils'
+`$ manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|python|utils'`
 
 You'll see something like this: http://pastebin.test.redhat.com/772199
 This is what I do for kernel, which gets me kernel-5, kernel-rt, kernel-alt so that nothing is missed.
@@ -62,10 +64,10 @@ This is what I do for kernel, which gets me kernel-5, kernel-rt, kernel-alt so t
 See what happens when you run;
 `$ manifest_search wireshark separated`
 
+![wireshark](https://user-images.githubusercontent.com/32044701/59568228-88bb1680-9095-11e9-967b-abe0c84a4f8b.png)
+
 This will group and separate affects in terms of different products.
 Magic? No. See how entries are grouped and separated by community products and enterprise products .It's easy on the eyes. This will happen for all the complex packages as well.
-
-![wireshark](https://user-images.githubusercontent.com/32044701/59568228-88bb1680-9095-11e9-967b-abe0c84a4f8b.png)
 
 
 # Example 4: poppler
@@ -79,7 +81,7 @@ The output that you see here, will directly go in to the affects section of `$sf
 
 $ manifest_search glib 'glibc|glibd|json|networking|dbus|json|tag|libvirt|libgit|geocode|libappstream|glibmm|cglib|telepathy|perl|snapd|ghc|python|libac|libgs|template|signon|pcre|rubygem|rust|java|spglib|alglib|codeready|amazon'
 
-Do I have to type so much? No, The above command is the same as the one below, which is very easy once you start using this script. Once you're aware how this works, you'll start using your intelligence and optimise the commands. 
+Do I have to type so much? No, The above command is the same as the one below, which is very easy once you start using this script. Once you're aware how this works, you'll start using your intelligence and optimise the commands.
 
 $ manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]' 'amazon|codeready'
 
