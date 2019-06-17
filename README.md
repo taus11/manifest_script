@@ -33,18 +33,19 @@ rh-cat
 cat95-cat
 ```
 
-`$ manifest_search "cat-1|small-cat"`
+`$ manifest_search "cat-white|cat-1|small-cat"`
 
 Result:
 
 ```
+cat-white
 cat-1
 small-cat
 ```
 
 You can also power use regex to see all versions of cat- as well as small-cat.
 
-`$ manifest_search "cat-[0-9]|small-cat"`
+`$ manifest_search "cat-white|cat-[0-9]|small-cat"`
 
 
 # Example 2 : kernel : I want to see both kernel-rt and kernel-alt
@@ -60,10 +61,10 @@ $ manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|py
 ```
 
 You'll see something like this: http://pastebin.test.redhat.com/772199
-This is what I do for kernel, which gets me kernel-5, kernel-rt, kernel-alt so that nothing is missed.
+This will gets you kernel-5, kernel-rt, kernel-alt so that nothing is missed.
 
 
-# Example 3: A problem is a use case.
+# Example 3: php: A problem is a use case.
 
 - Problem statement:
 
@@ -94,8 +95,13 @@ Magic? No. See how entries are grouped and separated by community products and e
 
 # Example 5: poppler
 
-`$ manifest_search poppler 'rubygem|sharp|zathura|compat|poppler-data|python|pypoppler|utils''`
-![poppler_1](https://user-images.githubusercontent.com/32044701/59568603-9a52ed00-909a-11e9-8bfc-bc0ca8bad61c.png)
+`$ manifest_search poppler 'rubygem|sharp|zathura|compat|poppler-data|python|pypoppler|utils'`
+
+is the same as [Simpler]:
+
+`$ manifest_search 'mingw-poppler|/poppler-[0-9]' separate`
+
+![poppler_new](https://user-images.githubusercontent.com/32044701/59624922-ab146900-9155-11e9-9d2a-d778296e6b3d.png)
 
 The output that you see here, will directly go in to the affects section of `$sfm2 flaw create`. You don't need to find the needle in a haystack. [ Some day, we can have that automation for #incoming ]
 
