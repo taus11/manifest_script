@@ -75,7 +75,7 @@ This will gets you kernel-5, kernel-rt, kernel-alt so that nothing is missed.
 ```
 # Solution:
 
-combine  `php-[0-9]` `rh-php70-php` both:
+Combine  `php-[0-9]` `rh-php70-php` both:
 
 - php: `manifest_search '/php-[0-9]|rh-php[0-9][0-9]-php-[0-9]|/php[0-9]-|/php[0-9][0-9]-[0-9]|/php[0-9][0-9]-[0-9]' separated`
 
