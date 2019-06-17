@@ -67,6 +67,7 @@ This is what I do for kernel, which gets me kernel-5, kernel-rt, kernel-alt so t
 # Example 3: I want to see if we ship wireshark.
 
 `$ manifest_search wireshark`
+
 ![wireshark_unseparated](https://user-images.githubusercontent.com/32044701/59568324-bf456100-9096-11e9-9d46-4070acab77dd.png)
 
 See what happens when you run;
@@ -83,7 +84,7 @@ Magic? No. See how entries are grouped and separated by community products and e
 `$ manifest_search poppler 'rubygem|sharp|zathura|compat|poppler-data|python|pypoppler|utils''`
 ![poppler_1](https://user-images.githubusercontent.com/32044701/59568603-9a52ed00-909a-11e9-8bfc-bc0ca8bad61c.png)
 
-The output that you see here, will directly go in to the affects section of `$sfm2 flaw create`. You don't need to find the needle in a haystack. Some day, we can have that automation for #incoming
+The output that you see here, will directly go in to the affects section of `$sfm2 flaw create`. You don't need to find the needle in a haystack. [ Some day, we can have that automation for #incoming ]
 
 # Example 5: glib
 
@@ -91,7 +92,7 @@ The output that you see here, will directly go in to the affects section of `$sf
 $ manifest_search glib 'glibc|glibd|json|networking|dbus|json|tag|libvirt|libgit|geocode|libappstream|glibmm|cglib|telepathy|perl|snapd|ghc|python|libac|libgs|template|signon|pcre|rubygem|rust|java|spglib|alglib|codeready|amazon'
 ```
 
-Do I have to type so much? No, The above command is the same as the one below, which is very easy once you start using this script. Once you're aware how this works, you'll start using your intelligence and optimise the commands.
+Do I have to type so much? No, the above command is the same as the one below, which is very easy once you start using this script. Once you're aware how this works, you'll start using your intelligence and optimise the commands.
 
 ```
 $ manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]' 'amazon|codeready'
@@ -108,29 +109,41 @@ $ manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]' 'a
 <lpardo>        we don't get matches like rh-php70-php
 ```
 # Solution:
-- php: `manifest_search  'php-[0-9]|rh-php[0-9][0-9]-php' 'pear|pecl|codeready|dropbox|ring|captcha|less|mod|kdevelop|zipstream|jmespath|zxcvbn|scss|xmp'`
+- php: `manifest_search '/php-[0-9]|/php[0-9]-|/php[0-9][0-9]-[0-9]|/php[0-9][0-9]-[0-9]|rh-php[0-9][0-9]-php-[0-9]' separate`
 
-![php](https://user-images.githubusercontent.com/32044701/59569556-eefd6480-90a8-11e9-9eaa-211a50c3800b.png)
+![php_new](https://user-images.githubusercontent.com/32044701/59624067-74d5ea00-9153-11e9-8adb-4cc103609cc6.png)
+
 
 
 # Example 7:
 
 OK that was easy, what about complex things like python urllib?
 
-- python and urllib: `manifest_search 'rh-python[0-9][0-9]-python-[0-9]|/python-[0-9]|/python-urllib[0-9]-[0-9]' separated`
+- python: `manifest_search '/python-[0-9]|/python[0-9]-[0-9]|python[0-9][0-9]-[0-9]|rh-python[0-9][0-9]-python-[0-9]|python[0-9][0-9]-python-[0-9]' separated`
+
+- python-urllib: `manifest_search '/python-urllib[0-9]-[0-9]|/python-urllib[0-3]' separated`
+
+-Both: `manifest_search 'rh-python[0-9][0-9]-python-[0-9]|/python-[0-9]|/python-urllib[0-9]-[0-9]' separated`
 
 
 # Tips:
   - You can change the function name `manifest_search` to whatever you were already used to before to be more comfortable. But first use it and get some hands on.
   - If in doubt of any specific package, ask me: Hey, I want to see these packages, I'll quickly form a command, give it to you and you'll quickly learn it.
   - you can further `| grep rhscl` these to show all kinds of php stuff only for rhscl. So we don't really need a separate manifest(🤔) .But we don't even need to do that since PSmodules like rhscl are already grouped and separated.
+  - you can simply scrape older flaw's PSComponent affects and add them in <show_these> argument ;)  🤫
 
 # More commands : #incoming, we can have a collection of these!
 
 - postgresql: `manifest_search 'postgresql [(]in|postgresql-[0-9]|postgresql.jar|mingw-postgresql|rh-postgresql[0-9][0-9]-postgresql|postgresql[0-9][0-9]|postgresql[0-9][0-9]-postgresql' 'libs-|repmgr|apb|pglogical|jdbc|odbc|testing|perl|spacewalk|PGDG'
 `
 
-- Notice the embedded `embedded:enterprise_linux:8/postgresql (in libpq, client libs only)` is also shown in the output, because of the first term. We're reducing human errors to avoid missing anything. `Gotta catch 'em all!`  Try doing it for gd ;) [I'm working to automate this part as well, so you don't have to write it].
+- Notice the embedded `embedded:enterprise_linux:8/postgresql (in libpq, client libs only)` is also shown in the output, because of the first term. We're reducing human errors to avoid missing anything. `Gotta catch 'em all!`
+
+- Try doing it for gd ;) [I'm working to automate this part as well, so you don't have to].
+
+`$manifest_search 'gd [(]|/gd-[0-9]' codeready`
+
+![gd](https://user-images.githubusercontent.com/32044701/59624109-8dde9b00-9153-11e9-837a-c4c337e4f7de.png)
 
 
 
@@ -163,6 +176,7 @@ OK that was easy, what about complex things like python urllib?
 
 - bootsrap-sass: `manifest_search bootstrap-sass separated`
 
+- gstreamer: `manifest_search GStreamer 'ugly|good|base|bad|java|vaapi|tools|backend|gstreamer-python|perl|plugins|python|clutter|qt'`
 
 
 
@@ -192,7 +206,7 @@ $ manifest_search '/gd ' first, to find out packages like 'gd (in php)'
 Also Make a practice to search:
 $ manifest_search 'solr[0-9]' first, to find out packages like 'solr3' package
 
-        - upload it to PS tools git repo
-        - Email to incoming. send this to thoger also as a reply to his mail Subject: [psr] Missing or incorrect flaw affects entries  
-        -. Optimise for packages like python : http://localhost:5600/static/#/flaw/1631420
-        -.    automatically do this in first filter :  echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'"
+- upload it to PS tools git repo
+- Email to incoming. send this to thoger also as a reply to his mail Subject: [psr] Missing or incorrect flaw affects entries  
+-. Optimise for packages like python : http://localhost:5600/static/#/flaw/1631420
+-.    automatically do this in first filter :  echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'"
