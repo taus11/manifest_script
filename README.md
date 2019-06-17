@@ -74,7 +74,10 @@ This will gets you kernel-5, kernel-rt, kernel-alt so that nothing is missed.
 <lpardo>        we don't get matches like rh-php70-php
 ```
 # Solution:
-- php: `manifest_search '/php-[0-9]|/php[0-9]-|/php[0-9][0-9]-[0-9]|/php[0-9][0-9]-[0-9]|rh-php[0-9][0-9]-php-[0-9]' separated`
+
+combine  `php-[0-9]` `rh-php70-php` both:
+
+- php: `manifest_search '/php-[0-9]|rh-php[0-9][0-9]-php-[0-9]|/php[0-9]-|/php[0-9][0-9]-[0-9]|/php[0-9][0-9]-[0-9]' separated`
 
 ![php_new](https://user-images.githubusercontent.com/32044701/59624067-74d5ea00-9153-11e9-8adb-4cc103609cc6.png)
 
@@ -193,9 +196,3 @@ OK that was easy, what about complex things like python urllib?
 
 
 # Thanks for Reading it till here
-
-
-
-`bold`
-`**bold**`
-**bold**
