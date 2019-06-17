@@ -60,8 +60,4 @@ function manifest_search {
     red=$(tput setaf 1)
     printf "%*s\n" $(((${#end}+$COLUMNS)/2)) "${red}$end"
 
-echo
-printf "\n\033[1;31mNotes: \033[0m\n"
-echo  "- If ' "''$formatter''" ' is not the package that you are searching, please manually add first term '"'package [(]'"' "
-echo "- Discussion with Tomas: rh-package35-package is the actual package and rh-package35 is a meta package. Package names as rh-pyhon35 in affects are almost never correct. So, For RHSCL, we consider rh-package35-package instead of packages like rh-package35. This depends on having list of valid collections defined, which we only do for rhscl. So we're not sure about PSModules other than RHSCL. Also note that httpd24 in affects is wrong for rhscl, but it is/was correct for some jboss product jboss_enterprise_web_server:3.1.3/httpd24-2.4.6-62.ep7.el7 "
 }
