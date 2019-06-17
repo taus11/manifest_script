@@ -74,7 +74,7 @@ This will gets you kernel-5, kernel-rt, kernel-alt so that nothing is missed.
 <lpardo>        we don't get matches like rh-php70-php
 ```
 # Solution:
-- php: `manifest_search '/php-[0-9]|/php[0-9]-|/php[0-9][0-9]-[0-9]|/php[0-9][0-9]-[0-9]|rh-php[0-9][0-9]-php-[0-9]' separate`
+- php: `manifest_search '/php-[0-9]|/php[0-9]-|/php[0-9][0-9]-[0-9]|/php[0-9][0-9]-[0-9]|rh-php[0-9][0-9]-php-[0-9]' separated`
 
 ![php_new](https://user-images.githubusercontent.com/32044701/59624067-74d5ea00-9153-11e9-8adb-4cc103609cc6.png)
 
@@ -99,11 +99,11 @@ Magic? No. See how entries are grouped and separated by community products and e
 
 is the same as [Simpler]:
 
-`$ manifest_search 'mingw-poppler|/poppler-[0-9]' separate`
+`$ manifest_search 'mingw-poppler|/poppler-[0-9]' separated`
 
 ![poppler_new](https://user-images.githubusercontent.com/32044701/59624922-ab146900-9155-11e9-9d2a-d778296e6b3d.png)
 
-The output that you see here, will directly go in to the affects section of `$sfm2 flaw create`. You don't need to find the needle in a haystack. [ Some day, we can have that automation for #incoming ]
+The output that you see here, will directly go in to the affects section of `$sfm2 flaw create`, as affected or notaffected. You don't need to find the needle in a haystack. [ Some day, we can have that automation for #incoming ]
 
 # Example 6: glib
 
@@ -118,6 +118,8 @@ $ manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]' 'a
 ```
 ![glib](https://user-images.githubusercontent.com/32044701/59569665-74354900-90aa-11e9-9e55-4e3b7708b89d.png)
 
+Getting it? It gets simplified.
+
 
 # Example 7:
 
@@ -127,7 +129,9 @@ OK that was easy, what about complex things like python urllib?
 
 - python-urllib: `manifest_search '/python-urllib[0-9]-[0-9]|/python-urllib[0-3]' separated`
 
--Both: `manifest_search 'rh-python[0-9][0-9]-python-[0-9]|/python-[0-9]|/python-urllib[0-9]-[0-9]' separated`
+-Both: combine the above two
+
+`manifest_search '/python-[0-9]|/python[0-9]-[0-9]|python[0-9][0-9]-[0-9]|rh-python[0-9][0-9]-python-[0-9]|python[0-9][0-9]-python-[0-9]|/python-urllib[0-9]-[0-9]|/python-urllib[0-3]' separated`
 
 
 # Tips:
