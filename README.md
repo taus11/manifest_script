@@ -47,7 +47,23 @@ You can also power use regex to see all versions of cat- as well as small-cat.
 `$ manifest_search "cat-[0-9]|small-cat"`
 
 
-# Example 2: A problem is a use case.
+# Example 2 : kernel : I want to see both kernel-rt and kernel-alt
+
+`$ manifest_search 'kernel-alt|kernel-rt'`
+
+![kernel-alt|kernel-rt](https://user-images.githubusercontent.com/32044701/59568287-5f4eba80-9096-11e9-9598-5848f3ee0bd2.png)
+
+To view all kernel affects, try:
+
+```
+$ manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|python|utils'
+```
+
+You'll see something like this: http://pastebin.test.redhat.com/772199
+This is what I do for kernel, which gets me kernel-5, kernel-rt, kernel-alt so that nothing is missed.
+
+
+# Example 3: A problem is a use case.
 
 - Problem statement:
 
@@ -61,7 +77,7 @@ You can also power use regex to see all versions of cat- as well as small-cat.
 
 ![php_new](https://user-images.githubusercontent.com/32044701/59624067-74d5ea00-9153-11e9-8adb-4cc103609cc6.png)
 
-# Example 3: I want to see if we ship wireshark.
+# Example 4: I want to see if we ship wireshark.
 
 `$ manifest_search wireshark`
 
@@ -76,14 +92,14 @@ This will group and separate affects in terms of different products like Fedora,
 Magic? No. See how entries are grouped and separated by community products and enterprise products .It's easy on the eyes. This will happen for all the complex packages as well.
 
 
-# Example 4: poppler
+# Example 5: poppler
 
 `$ manifest_search poppler 'rubygem|sharp|zathura|compat|poppler-data|python|pypoppler|utils''`
 ![poppler_1](https://user-images.githubusercontent.com/32044701/59568603-9a52ed00-909a-11e9-8bfc-bc0ca8bad61c.png)
 
 The output that you see here, will directly go in to the affects section of `$sfm2 flaw create`. You don't need to find the needle in a haystack. [ Some day, we can have that automation for #incoming ]
 
-# Example 5: glib
+# Example 6: glib
 
 ```
 $ manifest_search glib 'glibc|glibd|json|networking|dbus|json|tag|libvirt|libgit|geocode|libappstream|glibmm|cglib|telepathy|perl|snapd|ghc|python|libac|libgs|template|signon|pcre|rubygem|rust|java|spglib|alglib|codeready|amazon'
@@ -96,21 +112,6 @@ $ manifest_search '/glib-[0-9]|/glib[0-9]-|mingw-glib-[0-9]|/mingw-glib[0-9]' 'a
 ```
 ![glib](https://user-images.githubusercontent.com/32044701/59569665-74354900-90aa-11e9-9e55-4e3b7708b89d.png)
 
-
-# Example 6 : kernel : I want to see both kernel-rt and kernel-alt
-
-`$ manifest_search 'kernel-alt|kernel-rt'`
-
-![kernel-alt|kernel-rt](https://user-images.githubusercontent.com/32044701/59568287-5f4eba80-9096-11e9-9598-5848f3ee0bd2.png)
-
-To view all kernel affects, try:
-
-```
-$ manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|python|utils'
-```
-
-You'll see something like this: http://pastebin.test.redhat.com/772199
-This is what I do for kernel, which gets me kernel-5, kernel-rt, kernel-alt so that nothing is missed.
 
 # Example 7:
 
