@@ -193,3 +193,8 @@ OK that was easy, what about complex things like python urllib?
 
 
 # Thanks for Reading it till here
+
+
+
+`bold`
+`*bold*`
