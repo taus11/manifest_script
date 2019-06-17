@@ -192,32 +192,4 @@ OK that was easy, what about complex things like python urllib?
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# sort
-echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'" ;
-echo ; echo "Also Make a practice to search:" ; echo "$ manifest_search '""solr[0-9]""' first, to find out packages like 'solr3' package"
-
-# Tasks to do:
-Make a practice to search:
-$ manifest_search '/gd ' first, to find out packages like 'gd (in php)'
-Also Make a practice to search:
-$ manifest_search 'solr[0-9]' first, to find out packages like 'solr3' package
-
-- upload it to PS tools git repo
-- Email to incoming. send this to thoger also as a reply to his mail Subject: [psr] Missing or incorrect flaw affects entries  
--. Optimise for packages like python : http://localhost:5600/static/#/flaw/1631420
--.    automatically do this in first filter :  echo ; echo "Make a practice to search:" ; echo "$ manifest_search '""/gd ""' first, to find out packages like 'gd (in php)'"
+# Thanks for Reading it till here
