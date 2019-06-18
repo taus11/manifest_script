@@ -81,7 +81,17 @@ Combine  `php-[0-9]` `rh-php70-php` both:
 
 ![php_new](https://user-images.githubusercontent.com/32044701/59624067-74d5ea00-9153-11e9-8adb-4cc103609cc6.png)
 
-# Example 4: I want to see if we ship wireshark.
+# Example 4: Corner Cases like gd
+
+- Try doing it for gd ;) [I'm working to automate this part as well, so you don't have to] [Done: See the GD example below]
+
+`$manifest_search '/gd-[0-9]' codeready`
+
+![gd_new](https://user-images.githubusercontent.com/32044701/59669988-c5435b00-91d8-11e9-9038-cdd6bd7aa796.png)
+
+See the corner cases, this applied to all the packages that you have embedded in other packages, you don't have to search for these separately ;) . Don't worry about the term, it will automatically pick up the right term.
+
+# Example 5: I want to see if we ship wireshark.
 
 `$ manifest_search wireshark`
 
@@ -96,7 +106,7 @@ This will group and separate affects in terms of different products like Fedora,
 Magic? No. See how entries are grouped and separated by community products and enterprise products .It's easy on the eyes. This will happen for all the complex packages as well.
 
 
-# Example 5: poppler
+# Example 6: poppler
 
 `$ manifest_search poppler 'rubygem|sharp|zathura|compat|poppler-data|python|pypoppler|utils'`
 
@@ -108,7 +118,7 @@ is the same as [Simpler]:
 
 The output that you see here, will directly go in to the affects section of `$sfm2 flaw create`, as affected or notaffected. You don't need to find the needle in a haystack. [ Some day, we can have that automation for #incoming ]
 
-# Example 6: glib
+# Example 7: glib
 
 ```
 $ manifest_search glib 'glibc|glibd|json|networking|dbus|json|tag|libvirt|libgit|geocode|libappstream|glibmm|cglib|telepathy|perl|snapd|ghc|python|libac|libgs|template|signon|pcre|rubygem|rust|java|spglib|alglib|codeready|amazon'
@@ -152,15 +162,6 @@ OK that was easy, what about complex things like python urllib?
 `
 
 - Notice the embedded `embedded:enterprise_linux:8/postgresql (in libpq, client libs only)` is also shown in the output, because of the first term. We're reducing human errors to avoid missing anything. `Gotta catch 'em all!`
-
-- Try doing it for gd ;) [I'm working to automate this part as well, so you don't have to].
-
-`$manifest_search '/gd-[0-9]' codeready`
-
-![gd_new](https://user-images.githubusercontent.com/32044701/59669988-c5435b00-91d8-11e9-9038-cdd6bd7aa796.png)
-
-See the corner cases, this applied to all the packages that you have embedded in other packages, you don't have to search for these separately ;) . Don't worry about the term, it will automatically pick up the right term.
-
 
 - mariadb: `manifest_search 'mariadb-|mariadb:[0-9][0-9].[0-9]/mariadb-|mariadb-galera|rh-mariadb[0-9][0-9][0-9]-mariadb' 'java|connector|client|container|apb|libs|pax'
 `
