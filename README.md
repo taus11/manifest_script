@@ -155,10 +155,11 @@ OK that was easy, what about complex things like python urllib?
 
 - Try doing it for gd ;) [I'm working to automate this part as well, so you don't have to].
 
-`$manifest_search 'gd [(]|/gd-[0-9]' codeready`
+`$manifest_search '/gd-[0-9]' codeready`
 
-![gd](https://user-images.githubusercontent.com/32044701/59624109-8dde9b00-9153-11e9-837a-c4c337e4f7de.png)
+![gd_new](https://user-images.githubusercontent.com/32044701/59669988-c5435b00-91d8-11e9-9038-cdd6bd7aa796.png)
 
+See the corner cases, this applied to all the packages that you have embedded in other packages, you don't have to search for these separately ;) . Don't worry about the term, it will automatically pick up the right term.
 
 
 - mariadb: `manifest_search 'mariadb-|mariadb:[0-9][0-9].[0-9]/mariadb-|mariadb-galera|rh-mariadb[0-9][0-9][0-9]-mariadb' 'java|connector|client|container|apb|libs|pax'

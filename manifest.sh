@@ -50,9 +50,13 @@ function manifest_search {
 
     #This block is to automate searching for embedded packages
     formatter=$(echo "$1"|awk -F"|" '{split($1,a,"-");match(a[1],"[[:alnum:]]+",b);print b[0]}' )
-    printf "\n\033[1;31mcorner case: Searching for embedded %s in other packages ↴ [Ignore if empty]\033[0m\n" " '$formatter' "
+    printf "\n\033[1;31mCorner case: %s is embedded in the following packages: [Ignore if empty]  ↴\033[0m\n" " '$formatter' "
     echo
-    egrep --exclude-dir=$containers_dir --exclude='manifest-eol.txt' -r -h -i -e "$formatter [(]" $manifest_dir
+    # egrep --exclude-dir=$containers_dir --exclude='manifest-eol.txt' -r -h -i -e "$formatter [(in ]|$formatter-[0-9].[0-9].[0-9] [(in ]" $manifest_dir
+    egrep --exclude-dir=$containers_dir --exclude='manifest-eol.txt' -r -h -i -e "$formatter-[.0-9]+[[:space:]]+\(in|$formatter[.0-9]+[[:space:]]+\(in|$formatter[[:space:]]+\(in" $manifest_dir
+
+
+# egrep [-]'[.0-9]+[[:space:]]+\(in' manifest-hints.txt
 
     echo
     COLUMNS=$(tput cols)
