@@ -152,7 +152,7 @@ OK that was easy, what about complex things like python urllib?
   - If in doubt of any specific package, ask me: Hey, I want to see these packages, I'll quickly form a command, give it to you and you'll quickly learn it.
   - you can further `| grep rhscl` these to show all kinds of php stuff only for rhscl. So we don't really need a separate manifest(🤔) But we don't even need to do that since PSmodules like rhscl are already grouped and separated.
   - you can simply scrape older flaw's PSComponent affects and add them in <show_these> argument ;)  🤫
-  - If ' postgresql ' is not the package that you are searching, please manually add first term 'package [(]'
+  - If the package name in corner case is not the package that you are searching, simply manually add first term in the first argument as 'package [(]'
   - Discussion with Tomas: rh-package35-package is the actual package and rh-package35 is a meta package. Package names as rh-pyhon35 in affects are almost never correct. So, For RHSCL, we consider rh-package35-package instead of packages like rh-package35. This depends on having list of valid collections defined, which we only do for rhscl. So we're not sure about PSModules other than RHSCL. Also note that httpd24 in affects is wrong for rhscl, but it is/was correct for some jboss product jboss_enterprise_web_server:3.1.3/httpd24-2.4.6-62.ep7.el7
 
 
