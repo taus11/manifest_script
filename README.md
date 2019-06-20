@@ -195,3 +195,6 @@ OK that was easy, what about complex things like python urllib?
 
 
 ![kitty](https://user-images.githubusercontent.com/32044701/59673660-4bfb3680-91df-11e9-9054-f39009e6ed9b.jpg)
+
+http://github.com - automatic!
+[GitHub](http://github.com)
