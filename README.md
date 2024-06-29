@@ -1,4 +1,4 @@
-These are the work-simplifying scripts that I create and keep improving which keeps improving.
+These are the work-simplifying scripts that I created. It improves searching for specific product and versions from the large datasets of software bill of materials (SBOMs).
 
 # How to install:
 1. Clone this repo
@@ -48,7 +48,7 @@ You can also power use regex to see all versions of cat- as well as small-cat.
 `$ manifest_search "cat-white|cat-[0-9]|small-cat"`
 
 
-# Example 2 : kernel : I want to see both kernel-rt and kernel-alt
+# Example 2: kernel - I want to see both kernel-rt and kernel-alt
 
 `$ manifest_search 'kernel-alt|kernel-rt'`
 
@@ -60,7 +60,6 @@ To view all kernel affects, try:
 $ manifest_search 'kernel-rt|kernel-alt|/kernel-' 'headers|xen|firmware|tools|python|utils'
 ```
 
-You'll see something like this: http://pastebin.test.redhat.com/772199
 This will gets you kernel-5, kernel-rt, kernel-alt so that nothing is missed.
 
 
@@ -69,9 +68,9 @@ This will gets you kernel-5, kernel-rt, kernel-alt so that nothing is missed.
 - Problem statement:
 
 ```
-<lpardo>        the problem is when we like grep -Eir php-[0-9]
-<Tausif>        hm hm
-<lpardo>        we don't get matches like rh-php70-php
+<user>        the problem is when we like grep -Eir php-[0-9]
+<me>        hm hm
+<user>        we don't get matches like rh-php70-php
 ```
 # Solution:
 
@@ -116,7 +115,7 @@ is the same as [Simpler]:
 
 ![poppler_new](https://user-images.githubusercontent.com/32044701/59624922-ab146900-9155-11e9-9d2a-d778296e6b3d.png)
 
-The output that you see here, will directly go in to the affects section of `$sfm2 flaw create`, as affected or notaffected. You don't need to find the needle in a haystack. [ Some day, we can have that automation for #incoming ]
+The output that you see here, will directly go in to the affects section of `$sfm2 flaw create`, as affected or notaffected. You don't need to find the needle in a haystack. 
 
 # Example 7: glib
 
@@ -146,17 +145,7 @@ OK that was easy, what about complex things like python urllib?
 
 `manifest_search '/python-[0-9]|/python[0-9]-[0-9]|python[0-9][0-9]-[0-9]|rh-python[0-9][0-9]-python-[0-9]|python[0-9][0-9]-python-[0-9]|/python-urllib[0-9]-[0-9]|/python-urllib[0-3]' separated`
 
-
-# Tips:
-  - You can change the function name `manifest_search` to whatever you were already used to before to be more comfortable. But first use it and get some hands on.
-  - If in doubt of any specific package, ask me: Hey, I want to see these packages, I'll quickly form a command, give it to you and you'll quickly learn it.
-  - you can further `| grep rhscl` these to show all kinds of php stuff only for rhscl. So we don't really need a separate manifest(🤔) But we don't even need to do that since PSmodules like rhscl are already grouped and separated.
-  - you can simply scrape older flaw's PSComponent affects and add them in <show_these> argument ;)  🤫
-  - If the package name in corner case is not the package that you are searching, simply manually add first term in the first argument as 'package [(]'
-  - Discussion with Tomas: rh-package35-package is the actual package and rh-package35 is a meta package. Package names as rh-pyhon35 in affects are almost never correct. So, For RHSCL, we consider rh-package35-package instead of packages like rh-package35. This depends on having list of valid collections defined, which we only do for rhscl. So we're not sure about PSModules other than RHSCL. Also note that httpd24 in affects is wrong for rhscl, but it is/was correct for some jboss product jboss_enterprise_web_server:3.1.3/httpd24-2.4.6-62.ep7.el7
-
-
-# More commands to save time : #incoming, we can have a collection of these!
+# More commands to save time: We can have a collection of these!
 
 - postgresql: `manifest_search 'postgresql [(]in|postgresql-[0-9]|postgresql.jar|mingw-postgresql|rh-postgresql[0-9][0-9]-postgresql|postgresql[0-9][0-9]|postgresql[0-9][0-9]-postgresql' 'libs-|repmgr|apb|pglogical|jdbc|odbc|testing|perl|spacewalk|PGDG'
 `
